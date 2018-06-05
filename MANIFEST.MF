@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.wowowo.view.main
+Class-Path: lib/jl1.0.1.jar
+
