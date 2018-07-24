@@ -18,7 +18,7 @@ public class DrawableThread extends Thread{
 			if(myPanel.flagPause==true)
 			{
 				try {
-					Thread.sleep(20);
+					this.currentThread().sleep(20);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -29,7 +29,7 @@ public class DrawableThread extends Thread{
 				this.myPanel.repaint();//重新绘制 调用paintComponent方法
 				
 				try {
-					Thread.sleep(1);
+					this.currentThread().sleep(1);
 				}
 				catch (InterruptedException e) {
 					// TODO: handle exception

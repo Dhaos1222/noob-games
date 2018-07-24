@@ -63,6 +63,7 @@ public class Item {
 	{
 		//当道具被吃掉将其分数累加到玩家的总分中
 		this.myPanel.player.count+=this.count;
+		
 		this.myPanel.items.remove(this);
 	}
 }

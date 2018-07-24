@@ -12,9 +12,9 @@ public class MainFrame extends BaseFrame{
 		
 		setTouchListener();
 		
-		//setPlayerPowerLevel(1);
+		setPlayerPowerLevel(1);
 		
-		//addEnemyType(Enemy001.class);
+		addEnemyType(Enemy001.class);
 		
 		setEnemyHasItem();
 		
