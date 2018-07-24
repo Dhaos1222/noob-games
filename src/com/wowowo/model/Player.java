@@ -11,17 +11,19 @@ public class Player extends Thread{
 	
 	public MyPanel myPanel;
 	
-	public int width = 100;
+	public int width = 80;
 	
-	public int height = 150;
+	public int height = 100;
 
 	public int x;
 	
 	public int y;
 	
-	public int attackMode=0;
+	public int attackMode=1;
 	
 	public int count=0;//玩家的分数
+	
+	public int boom=3;//玩家炸弹数
 	
 	public int hp=100;
 	
@@ -77,12 +79,12 @@ public class Player extends Thread{
         if(right){
         	if(x<myPanel.getWidth()-100)
             x=x+step;  
-        }  
+        }
     }  
     
 	//存放所有飞机图像
 	public Image[] images=new Image[] {
-			Toolkit.getDefaultToolkit().getImage(Player.class.getResource("/Image/GodPlane.png"))
+			Toolkit.getDefaultToolkit().getImage(Player.class.getResource("/Image/HeroPlane.png"))
 			//Toolkit.getDefaultToolkit().getImage("src/Image/GodPlane.png")
 			//Toolkit.getDefaultToolkit().getImage("Image/GodPlane02.png"),
 			//Toolkit.getDefaultToolkit().getImage("Image/GodPlane.png"),

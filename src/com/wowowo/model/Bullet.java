@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 
+import javax.security.auth.login.FailedLoginException;
+
 import com.wowowo.view.MyPanel;
 
 public class Bullet {
@@ -17,6 +19,7 @@ public class Bullet {
 	public int x;
 	
 	public int y;
+	
 	
 	public Image[] images=new Image[] {
 			Toolkit.getDefaultToolkit().getImage(Bullet.class.getResource("/Image/bullet.png"))
@@ -44,7 +47,6 @@ public class Bullet {
 				
 				if(imageindex==this.images.length)
 					imageindex=0;
-				
 				y--;
 				if(y<0)
 				{
@@ -64,6 +66,7 @@ public class Bullet {
 					//子弹销毁
 					this.myPanel.bullets.remove(this);
 					//被攻击到
+					this.myPanel.player.count+=100;
 					e.underAttack();
 				}
 			}	

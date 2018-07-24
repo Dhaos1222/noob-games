@@ -32,9 +32,13 @@ public class Enemy {
 	
 	public Image[] dieImages=new Image[] {
 			
-			Toolkit.getDefaultToolkit().getImage("Image/boom1.png"),
-			Toolkit.getDefaultToolkit().getImage("Image/boom2.png"),
-			Toolkit.getDefaultToolkit().getImage("Image/boom3.png")
+			Toolkit.getDefaultToolkit().getImage(Enemy.class.getResource("/Image/Explosion01.png")),
+			Toolkit.getDefaultToolkit().getImage(Enemy.class.getResource("/Image/Explosion02.png")),
+			Toolkit.getDefaultToolkit().getImage(Enemy.class.getResource("/Image/Explosion03.png")),
+			Toolkit.getDefaultToolkit().getImage(Enemy.class.getResource("/Image/Explosion04.png")),
+			Toolkit.getDefaultToolkit().getImage(Enemy.class.getResource("/Image/Explosion05.png")),
+			Toolkit.getDefaultToolkit().getImage(Enemy.class.getResource("/Image/Explosion06.png")),
+			Toolkit.getDefaultToolkit().getImage(Enemy.class.getResource("/Image/Explosion07.png"))
 	};
 	
 	public int imageindex=0;
@@ -83,7 +87,6 @@ public class Enemy {
 			if(y>BaseFrame.frameHeight)
 				this.myPanel.enemies.remove(this);
 		}
-		
 	}
 	
 	public void killed()
@@ -93,7 +96,7 @@ public class Enemy {
 		{
 			for(int i=0;i<items.length;i++)
 			{
-				Item item=items[i];
+			    Item item=items[i];
 				
 				item.y=this.y;
 				
